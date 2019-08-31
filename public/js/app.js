@@ -8,7 +8,7 @@ weatherForm.addEventListener('submit', (e) => {
     e.preventDefault();
     forecast.className='flow-text'
     forecast.textContent = 'Loading forecast ...'
-    console.log(locationField.value)
+    //console.log(locationField.value)
     fetch(`http://localhost:3000/weather?address=${locationField.value}`).then((response) => {
         response.json().then((data) => {
             if (data.error) {
